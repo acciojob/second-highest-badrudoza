@@ -10,26 +10,22 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			let sh=-Infinity;
-			arr.sort();
-			for(let i=n-1;i>=1;i--)
-			{
-				if(arr[i]>arr[i-1])
-				{
+			arr.sort((a,b)=>b-a);
+			for(let i=n-1;i>=1;i--){
+				if(arr[i]>arr[i-1]){
 					sh=arr[i-1];
-					break;
 				}
-			}			
+			}	
 			return sh;
 		}
 
 		function Main() {
-			var n= prompt("Enter the number of elements");
+			var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
 			}
-			alert(secondHighest(arr);
+			alert(secondHighest(sh));			
 		}
 		Main();
 	</script>
